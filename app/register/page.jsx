@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../../public/assets/logo.png";
 
-const Login = () => {
+const Register = () => {
   return (
     <>
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
@@ -38,6 +39,25 @@ const Login = () => {
             </div>
 
             <div>
+              <label
+                htmlFor="name"
+                className="block text-sm/6 font-medium text-gray-900"
+              >
+                Name
+              </label>
+              <div className="mt-2">
+                <input
+                  type="name"
+                  name="name"
+                  id="name"
+                  autoComplete="name"
+                  required
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div>
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="password"
@@ -45,11 +65,6 @@ const Login = () => {
                 >
                   Password
                 </label>
-                <div className="text-sm">
-                  <a href="#" className="font-semibold text-black">
-                    Forgot password?
-                  </a>
-                </div>
               </div>
               <div className="mt-2">
                 <input
@@ -58,7 +73,7 @@ const Login = () => {
                   id="password"
                   autoComplete="current-password"
                   required
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2  sm:text-sm/6"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6"
                 />
               </div>
             </div>
@@ -66,22 +81,23 @@ const Login = () => {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-black px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                className="flex w-full justify-center rounded-md bg-black px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm "
               >
-                Sign in
+                Register
               </button>
             </div>
           </form>
 
           <p className="mt-10 text-center text-sm/6 text-gray-500">
-            Not a member?
-            <a href="/register" className="font-semibold text-black ml-2">
-              Register
-            </a>
+            Do you have already an account?{" "}
+            <Link href="/login" className="font-semibold text-black ml-2">
+              Log in
+            </Link>
           </p>
         </div>
       </div>
     </>
   );
 };
-export default Login;
+
+export default Register;
