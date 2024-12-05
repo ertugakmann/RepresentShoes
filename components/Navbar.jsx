@@ -11,6 +11,7 @@ import { TfiSearch } from 'react-icons/tfi';
 import { PiUserLight } from 'react-icons/pi';
 import { SlBasket } from 'react-icons/sl';
 import { CiMenuBurger } from 'react-icons/ci';
+import Link from 'next/link';
 
 const Navbar = () => {
   // Use States for Responsive Navbar
@@ -131,14 +132,52 @@ const Navbar = () => {
 
       {/* Overlay */}
       {overlayContent && (
-        <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center p-4">
+        <div className="fixed inset-0 bg-white flex flex-col p-4">
           <button
             className="absolute top-4 right-4 text-black text-2xl"
             onClick={closeOverlay}
           >
             ✕
           </button>
-          {overlayContent === 'menu' && <p className="text-xl">Menu Content</p>}
+          {overlayContent === 'menu' && (
+  <div className='flex flex-col h-full p-4'>
+    {/* Üst Kısım */}
+    <div>
+      <h3 className='text-2xl font-semibold'>Menu</h3>
+      <ul className='text-lg font-semibold mt-12'>
+        <li><Link href={"/login"}><span>New Arrivals</span></Link></li>
+        <li><Link href={"/login"}><span>Owners Club</span></Link></li>
+        <li><Link href={"/login"}><span>247</span></Link></li>
+      </ul>
+    </div>
+
+    {/* Orta Kısım (Shop) */}
+    <div className='mt-10'>
+      <span className='uppercase text-xs text-gray-500'>Shop</span>
+      <ul className='flex flex-col gap-y-3 mt-2 font-semibold text-sm'>
+        <li><Link href={"/login"}><span>Black Friday Sale</span></Link></li>
+        <li><Link href={"/login"}><span>Clothing</span></Link></li>
+        <li><Link href={"/login"}><span>Collections</span></Link></li>
+        <li><Link href={"/login"}><span>Featured</span></Link></li>
+        <li><Link href={"/login"}><span>Footwear</span></Link></li>
+        <li><Link href={"/login"}><span>Accessories</span></Link></li>
+        <li><Link href={"/login"}><span>Gift Card</span></Link></li>
+      </ul>
+    </div>
+
+    {/* Alt Kısım */}
+    <div className='mt-auto'>
+      <ul className='text-xs text-gray-500 font-semibold'>
+        <li><Link href={"/login"}><span>Client Services</span></Link></li>
+        <li><Link href={"/login"}><span>Company</span></Link></li>
+        <li><Link href={"/login"}><span>Brand</span></Link></li>
+        <li><Link href={"/login"}><span>Terms & Privacy</span></Link></li>
+        <li><Link href={"/login"}><span>GB / GBP £ / English</span></Link></li>
+      </ul>
+    </div>
+  </div>
+)}
+
           {overlayContent === 'search' && <p className="text-xl">Search Content</p>}
           {overlayContent === 'notifications' && (
             <p className="text-xl">Notifications Content</p>
@@ -146,7 +185,9 @@ const Navbar = () => {
           {overlayContent === 'wishlist' && (
             <p className="text-xl">Wishlist Content</p>
           )}
-          {overlayContent === 'profile' && <p className="text-xl">Profile Content</p>}
+          {overlayContent === 'profile' && (
+            <p className="text-xl">Profile Content</p>
+          )}
           {overlayContent === 'cart' && <p className="text-xl">Cart Content</p>}
         </div>
       )}
