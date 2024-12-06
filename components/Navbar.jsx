@@ -105,21 +105,21 @@ const Navbar = () => {
               </button>
             </li>
             <li>
-              <button onClick={() => setOverlayContent('profile')}>
+              <Link href={"/login"}>
                 <PiUserLight size={18} />
-              </button>
+              </Link>
             </li>
             <li>
-              <Link href={"/login"}>
+            <button onClick={() => setOverlayContent('notifications')}>
                 <SlBasket size={18} />
-              </Link>
+              </button>
             </li>
           </ul>
           <ul className="flex lg:hidden items-center gap-x-5">
             <li>
-              <button onClick={() => setOverlayContent('profile')}>
+              <Link href={"/login"}>
                 <PiUserLight size={18} />
-              </button>
+              </Link>
             </li>
             <li>
               <button onClick={() => setOverlayContent('cart')}>
@@ -194,8 +194,8 @@ const Navbar = () => {
                 </ul>
 
         {/* Searched Products */}
-<div className='w-full mt-6 overflow-x-auto'>
-  <div className='grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4'>
+<div className='w-full mt-6'>
+  <div className='grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 overflow-[overlay]'>
     <Link href={"/"}>
       <div className='flex flex-col'>
         <Image
@@ -265,12 +265,6 @@ const Navbar = () => {
 
               </div>
             </div>
-          )}
-          {overlayContent === 'notifications' && (
-            <p className="text-xl">Notifications Content</p>
-          )}
-          {overlayContent === 'wishlist' && (
-            <p className="text-xl">Wishlist Content</p>
           )}
           {overlayContent === 'cart' && (
             <>
