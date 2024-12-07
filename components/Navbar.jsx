@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-16 flex flex-col relative">
+    <div className="w-full h-16 flex flex-col relative z-10">
       {/* Top Banner */}
       <div className="w-full h-6 bg-black flex justify-center items-center py-1">
         <h6 className="text-white text-xs uppercase">
@@ -35,22 +35,22 @@ const Navbar = () => {
       {/* Main Navbar */}
       <div className="grid grid-cols-[1fr,auto,1fr] h-full w-full bg-transparent px-3 items-center">
         {/* Left Section */}
-        <div className="flex gap-x-4 text-white uppercase xl:text-sm text-[12px] items-center">
+        <div className="flex gap-x-4 text-gray-400 uppercase xl:text-sm text-[12px] items-center">
           <ul className="lg:flex hidden items-center gap-x-5">
             <li>
-              <a href="/">Shop</a>
+              <Link href="/shop">Shop</Link>
             </li>
             <li>
-              <a href="/">247</a>
+              <Link href="/">247</Link>
             </li>
             <li>
-              <a href="/">Collections</a>
+              <Link href="/">Collections</Link>
             </li>
             <li>
-              <a href="/">Brand</a>
+              <Link href="/">Brand</Link>
             </li>
             <li>
-              <a href="/">Looks</a>
+              <Link href="/">Looks</Link>
             </li>
           </ul>
           <ul className="flex lg:hidden items-center gap-x-5">
@@ -75,7 +75,7 @@ const Navbar = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex gap-x-4 text-white uppercase xl:text-sm text-[12px] items-center justify-end whitespace-nowrap">
+        <div className="flex gap-x-4 text-gray-400  uppercase xl:text-sm text-[12px] items-center justify-end whitespace-nowrap">
           <ul className="lg:flex hidden items-center gap-x-5">
             <li>
               <a href="/">Retail</a>
