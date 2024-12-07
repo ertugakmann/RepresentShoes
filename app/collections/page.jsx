@@ -3,18 +3,18 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const Shop = () => {
+const Collections = () => {
     
     const [readMore, setReadMore] = useState(false);
     const text =
-    'The 247 collection is created with performance and versatility in mind, designed to deliver on both function and style no matter the setting. The range includes performance tops, shorts, outerwear, hoodies, pants and accessories.';
+    'Discover the latest arrivals from Represent. Some of the latest additions to our new arrivals collection include our collaboration with Metallica, our Spring Summer 24 Collection, and 247 Marathon ranges. Buy now, pay later available with Klarna';
 
   const truncatedText = `${text.substring(0, 100)}...`;
 
   return (
     <div>
         <div className='p-6'>
-            <h2 className='font-semibold text-xl'>247</h2>
+            <h2 className='font-semibold text-xl'>New Arrivals</h2>
             <p className='text-sm text-gray-400 max-w-[59rem] mt-2 md:flex hidden'>{text}</p>
             <p className='text-sm text-gray-400 max-w-[59rem] mt-2 md:hidden flex'>{readMore ? text : truncatedText}</p>
             
@@ -82,4 +82,4 @@ const Shop = () => {
   )
 }
 
-export default Shop
+export default Collections

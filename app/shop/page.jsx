@@ -27,7 +27,7 @@ const Shop = () => {
             </button>
 
     {/* Products Section */}
-            <div className="w-full grid grid-cols-4 mt-12 gap-4">
+            <div className="w-full grid grid-cols-2 md:grid-cols-4 mt-12 gap-4">
           <div className="flex flex-col">
             <img className="w-auto h-auto" src="https://sfycdn.speedsize.com/fbaf6506-81e1-43a2-bcc1-80e18c7b0146/https://uk.representclo.com/cdn/shop/files/6FJw9MACj5dzAjdbSIqluNxuoENcubOF-nE_3EMGH5Y.jpg?v=1733440055&width=1109" alt="product-image" />
             <h2 className="text-md mt-2">Team 247 Insulated Jacket</h2>
